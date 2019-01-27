@@ -1,4 +1,4 @@
-package Exception;
+package exception;
 
 /**
  * 自定义异常处理类,message为异常的描述信息
