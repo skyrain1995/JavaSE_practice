@@ -10,7 +10,7 @@ public class MyException extends Exception{
         super(message);
     }
 }
-//测试自定义类
+// 测试自定义类
 class TestMyException{
     void test() throws MyException{}
 
