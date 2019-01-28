@@ -3,7 +3,7 @@ package IO.IO_base;
 import java.io.File;
 
 /**
- *\ /  名称分隔符
+ *\ / 名称分隔符
  */
 public class PathDemo01 {
     public static void main(String[] args) {
