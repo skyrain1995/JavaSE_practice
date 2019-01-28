@@ -4,7 +4,7 @@ import java.io.File;
 
 /**
  * 递归：方法自己调用自己
- * 打印子孙级目录和文件的名称
+ *  打印子孙级目录和文件的名称
  */
 public class DirDemo02 {
     public static void main(String[] args) {
