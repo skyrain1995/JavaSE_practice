@@ -3,7 +3,7 @@ package IO.IO_base;
 import java.io.UnsupportedEncodingException;
 
 /**
- * 编码：字符串->字节
+ * 编码：字符串-->字节
  */
 public class Encoding {
     public static void main(String[] args) throws UnsupportedEncodingException {
