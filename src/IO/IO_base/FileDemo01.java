@@ -8,8 +8,7 @@ public class FileDemo01 {
      * 相对路径和绝对路径
      * 1）存在盘符，绝对路径
      * 2）不存在盘符，相对路径
-     * 注：File可以构建一个不存在的路径
-     * @param args
+     * 注:File可以构建一个不存在的路径
      */
     public static void main(String[] args) {
         String path = "E:/sepractice/src/Kuanping28.jpg";

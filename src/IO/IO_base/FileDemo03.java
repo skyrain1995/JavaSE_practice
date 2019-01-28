@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * CreateNewFile():不存在才创建，也不能创建文件夹，不带后缀创建空文件
+ * CreateNewFile():不存在才能创建，也不能创建文件夹，不带后缀创建空文件
  * delete():删除已经存在的文件
  */
 public class FileDemo03 {

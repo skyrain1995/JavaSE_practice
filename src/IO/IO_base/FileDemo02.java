@@ -6,7 +6,7 @@ public class FileDemo02 {
     public static void main(String[] args) {
         /**
          * 名称或路径
-         * GetName()   getPath()
+         * GetName()  getPath()
          * GetAbsolutePath()
          * getParent
          */
