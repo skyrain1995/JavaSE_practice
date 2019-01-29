@@ -3,7 +3,7 @@ package IO.IO_stream;
 import java.io.*;
 
 /**
- * 字节数组输出流
+ * 字节数组输出流：ByteArrayOutputStream
  * 不一样的地方：1.创建源：内部维护
  *              2.选择流：不关联源
  *              3.释放：可以不用
