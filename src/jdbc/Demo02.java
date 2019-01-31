@@ -10,12 +10,14 @@ import java.sql.Statement;
  */
 public class Demo02 {
     public static void main(String[] args) {
+        Connection conn = null;
+        Statement stmt = null;
         try {
             //加载驱动类
             Class.forName("com.mysql.jdbc.Driver");
             //建立连接
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testjdbc","root","root");
-            Statement stmt = conn.createStatement();
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/testjdbc","root","root");
+            stmt = conn.createStatement();
 //            String sql = "insert into t_user(username,pwd,regtime) values ('王五',555,now())";
 //            stmt.execute(sql);
 
@@ -27,6 +29,21 @@ public class Demo02 {
             e.printStackTrace();
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            if(stmt != null){
+                try {
+                    stmt.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if(conn != null){
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
