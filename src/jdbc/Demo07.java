@@ -1,10 +1,16 @@
 package jdbc;
 
+import javafx.scene.input.DataFormat;
+
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  * 测试时间处理
  * java.sql.Date，java.sql.Time，java.sql.Timestamp
+ * 如何把字符串转换为数据库时间格式
  */
 public class Demo07 {
     public static void main(String[] args) {
@@ -47,6 +53,16 @@ public class Demo07 {
                     e.printStackTrace();
                 }
             }
+        }
+    }
+    //把字符串转换为数据库时间格式
+    public long str2Date(String dateStr) {
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        try {
+            return format.parse(dateStr).getTime();
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return 0;
         }
     }
 }
