@@ -4,6 +4,7 @@ package jdbc;
  * 使用properties配置文件
  */
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Properties;
@@ -14,10 +15,23 @@ public class JDBCUtil {
 
     static {   //加载JDBCUtil类的时候调用
         pt = new Properties();
+        FileInputStream is =null;
         try {
-            pt.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("db.properties"));
+            //从文件中读取输入流
+            is = new FileInputStream("src/jdbc/db.properties");
+            //从流中加载数据
+            pt.load(is);
+
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if(is != null){
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
     public static Connection getMysqlConn(){
